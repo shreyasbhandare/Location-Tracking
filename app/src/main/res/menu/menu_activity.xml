@@ -10,4 +10,8 @@
     <item
         android:id="@+id/action_online"
         android:title="Online" />
+
+    <item
+        android:id="@+id/action_query"
+        android:title="Query" />
 </menu>

@@ -11,6 +11,9 @@ import android.os.IBinder;
 import android.provider.Settings;
 import android.support.annotation.Nullable;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 /**
  * Created by shreyas on 10/30/16.
  */
@@ -19,6 +22,7 @@ public class GPS_Service extends Service {
 
     private LocationListener listener;
     private LocationManager locationManager;
+    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
     @Nullable
     @Override
@@ -33,7 +37,8 @@ public class GPS_Service extends Service {
             @Override
             public void onLocationChanged(Location location) {
                 Intent i = new Intent("location_update");
-                i.putExtra("coordinates",location.getLongitude()+" "+location.getLatitude());
+                i.putExtra("date-time",sdf.format(new Date(location.getTime())));
+                i.putExtra("coordinate",location.getLongitude()+" "+location.getLatitude());
                 sendBroadcast(i);
             }
 

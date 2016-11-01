@@ -1,6 +1,7 @@
 package com.mobileappclass.assignment3;
 
 import android.app.FragmentManager;
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
@@ -15,6 +16,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //start location service in the background
+        Intent ii = new Intent(getApplicationContext(),GPS_Service.class);
+        startService(ii);
+
         if(getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE){
             FragmentManager fragmentManager = getFragmentManager();
             FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
@@ -51,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
         else
             return super.onCreateOptionsMenu(menu);
     }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // TODO: handle clicks on the menu items
@@ -66,6 +73,13 @@ public class MainActivity extends AppCompatActivity {
             FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
             remoteDBFragment rdb = new remoteDBFragment();
             fragmentTransaction.replace(R.id.port_container, rdb);
+            fragmentTransaction.addToBackStack(null);
+            fragmentTransaction.commit();
+        }
+        else if(item.getItemId() == R.id.action_query) {
+            FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+            queryFragment qf = new queryFragment();
+            fragmentTransaction.replace(R.id.port_container, qf);
             fragmentTransaction.addToBackStack(null);
             fragmentTransaction.commit();
         }
