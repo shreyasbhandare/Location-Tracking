@@ -6,8 +6,8 @@
     <string name="serverDB">Server Database</string>
     
     <string-array name="items">
-        <item>Asceding</item>
-        <item>Desceding</item>
+        <item>Ascending</item>
+        <item>Descending</item>
     </string-array>
 
 </resources>

@@ -11,11 +11,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:textSize="25sp"
         android:text="Server Database"/>
 
     <ListView
-        android:id="@+id/listRelView"
+        android:id="@+id/remoteDBView"
         android:gravity="center"
         android:layout_weight="1"
         android:textAlignment="center"
@@ -33,14 +32,15 @@
         <TextView
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="end"
+            android:layout_gravity="start"
             android:textAlignment="center"
-            android:text="Server Status"/>
+            android:text="Server Status :"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center" />
+            android:id="@+id/status"
+            android:layout_gravity="start" />
 
     </LinearLayout>
 
@@ -54,16 +54,23 @@
         <TextView
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="end"
+            android:layout_gravity="start"
             android:textAlignment="center"
-            android:text="Network Type"/>
+            android:text="Network Type :"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"/>
+            android:id="@+id/ntype"
+            android:layout_gravity="start"/>
 
     </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/sync"
+        android:text="Sync"/>
 
 
 </LinearLayout>
