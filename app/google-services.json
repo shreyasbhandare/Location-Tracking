@@ -1,27 +1,27 @@
 {
   "project_info": {
-    "project_number": "694653368189",
-    "firebase_url": "https://location-tracking-5143e.firebaseio.com",
-    "project_id": "location-tracking-5143e",
-    "storage_bucket": "location-tracking-5143e.appspot.com"
+    "project_number": "980411097653",
+    "firebase_url": "https://assignment-3-7a0b6.firebaseio.com",
+    "project_id": "assignment-3-7a0b6",
+    "storage_bucket": "assignment-3-7a0b6.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:694653368189:android:20c91681034cef28",
+        "mobilesdk_app_id": "1:980411097653:android:20c91681034cef28",
         "android_client_info": {
           "package_name": "com.mobileappclass.assignment3"
         }
       },
       "oauth_client": [
         {
-          "client_id": "694653368189-paemrpva9t0nsquu1ka781s332ot5rep.apps.googleusercontent.com",
+          "client_id": "980411097653-9cdbmanm24liu8apbte0g3o53kkr7j69.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyA3jkml6Kts1NgU36ECG8fsWyv4WA9Z-SI"
+          "current_key": "AIzaSyB-Ou_4Eo_UyAEUpCMyBYofmVkFl1us0I4"
         }
       ],
       "services": {

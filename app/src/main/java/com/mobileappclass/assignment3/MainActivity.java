@@ -128,6 +128,8 @@ public class MainActivity extends AppCompatActivity {
 
             }else {
                 runtime_permissions();
+                Intent ii = new Intent(getApplicationContext(),GPS_Service.class);
+                startService(ii);
             }
         }
     }

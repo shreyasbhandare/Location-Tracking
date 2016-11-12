@@ -148,26 +148,6 @@ public class queryFragment extends Fragment {
 
             }
         });
-        /*
-        Query query1 = ref3.equalTo(netid);
-        query1.addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                for(DataSnapshot ds : dataSnapshot.getChildren()){
-                    for (DataSnapshot ds2 : ds.getChildren()){
-                        for(DataSnapshot ds3 : ds2.getChildren()){
-                            buffer.append(ds3.getValue()+" ");
-                        }
-                        rows3.add(buffer.toString());
-                        buffer.delete(0, buffer.length());
-                    }
-                }
-            }
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-
-            }
-        });*/
     }
 
 }
